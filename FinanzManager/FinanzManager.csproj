@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- ===================================================================
+       PROJEKTKONFIGURATION
+       ===================================================================
+       Hier wird festgelegt:
+       - WPF-Anwendung (UseWPF=true)
+       - Ziel-Framework: .NET 8 für Windows (LTS, aktueller Standard)
+       - Nullable Reference Types aktiviert (saubereres C#)
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>FinanzManager</RootNamespace>
+    <AssemblyName>FinanzManager</AssemblyName>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <LangVersion>latest</LangVersion>
+    <ApplicationIcon />
+  </PropertyGroup>
+
+  <!-- ===================================================================
+       NUGET-PAKETE (externe Bibliotheken)
+       ===================================================================
+       - EntityFrameworkCore.Sqlite: Object-Relational-Mapper für SQLite.
+         Erlaubt uns, mit C#-Klassen statt SQL-Strings zu arbeiten.
+       - EntityFrameworkCore.Design: Wird für Migrations gebraucht
+         (Datenbankschema-Versionierung).
+       - Microsoft.Extensions.Hosting: Generic Host für saubere
+         App-Initialisierung mit Dependency Injection.
+  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+  </ItemGroup>
+
+</Project>

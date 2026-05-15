@@ -1,0 +1,45 @@
+# ============================================================
+# .gitignore für ein .NET / Visual Studio WPF-Projekt
+# ============================================================
+# Diese Datei sagt Git, welche Dateien NICHT ins Repository
+# committet werden sollen — z.B. Build-Ergebnisse, temporäre
+# Dateien, lokale Einstellungen oder die SQLite-Datenbank.
+# ============================================================
+
+# Build-Ausgaben (werden bei jedem Build neu generiert)
+bin/
+obj/
+out/
+
+# Visual Studio Benutzer-Einstellungen (sind persönlich, nicht teilen)
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+
+# SQLite-Datenbankdateien (lokale Daten, nicht ins Repo)
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# OS-spezifische Dateien
+.DS_Store
+Thumbs.db

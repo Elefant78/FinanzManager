@@ -1,0 +1,31 @@
+<Application x:Class="FinanzManager.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--
+        ====================================================================
+        APP.XAML — Anwendungsweite Ressourcen
+        ====================================================================
+        Diese Datei definiert die Application-Klasse (siehe x:Class).
+        Hier können globale Styles, Farben, Brushes etc. definiert werden,
+        die in allen Fenstern und Views verfügbar sind.
+
+        Wichtig: StartupUri ist ABSICHTLICH NICHT gesetzt.
+        Wir starten das MainWindow manuell in App.xaml.cs, damit wir
+        vorher die Dependency-Injection aufsetzen können.
+        ====================================================================
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!-- Farbschema (kann später ausgebaut werden) -->
+            <Color x:Key="PrimaryColor">#2D5F8B</Color>
+            <Color x:Key="AccentColor">#4CAF50</Color>
+            <Color x:Key="BackgroundColor">#F5F5F5</Color>
+
+            <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />
+            <SolidColorBrush x:Key="AccentBrush" Color="{StaticResource AccentColor}" />
+            <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}" />
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
